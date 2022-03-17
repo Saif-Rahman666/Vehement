@@ -1,0 +1,39 @@
+{
+    "music":[
+        {   "id": 1,
+            "name": "Album 1",
+            "price": 25,
+            "imgName":"images/pika.jpg"
+        },
+        {   "id": 2,
+            "name": "Album 2",
+            "price": 2599,
+            "imgName":"images/cock.jpg"
+        },
+        {   "id": 3,
+            "name": "Album 3",
+            "price": 2500,
+            "imgName":"images/tesseract.png"
+        },
+        {   "id": 4,
+            "name": "Album 4",
+            "price": 2500,
+            "imgName":"images/sas.jpeg"
+        }
+    ],
+    "merch":[
+        {   "id": 5,
+            "name": "T-Shirt",
+            "price": 5500,
+            "imgName":"images/pain.png"
+            
+        },
+        {   "id": 6,
+            "name": "Pant",
+            "price": 7500,
+            "imgName":"images/Obito.jpg"
+
+        }
+
+    ]
+}
