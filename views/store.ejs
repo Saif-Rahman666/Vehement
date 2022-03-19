@@ -5,7 +5,11 @@
         <meta name="description" content="This is the description">
         <title>VEHEMENT | Store</title>
         <link rel="stylesheet" href="style.css"/> 
-        <script src="store.js" async></script>
+        <script src="https://checkout.stripe.com/checkout.js" defer></script>
+        <script>
+            var stripePublicKey = '<%= stripePublicKey %>'
+        </script>
+        <script src="store.js" defer></script>
     </head>
     <body>
         <header class="main-header">
@@ -26,7 +30,7 @@
                 <div class="shop-item" data-item-id="<%=item.id%>">
                 <span class="shop-item-title"><%= item.name %> </span>
                 
-                <img class="shop-item-image" src="images/<%= item.imgName  %> " >
+                <img class="shop-item-image" src="<%= item.imgName %> " >
                 <div class="shop-item-details">
                     <span class="shop-item-price">$<%= item.price/100 %> </span>
                     <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
@@ -38,22 +42,17 @@
         <section class="content-section container">
             <h2 class="section-header">Merch</h2>
             <div class="shop-items">
-            <div class="shop-item">
-                <span class="shop-item-title">T-Shirt</span>
-                <img class="shop-item-image" src="images/pain.png" >
-                <div class="shop-item-details">
-                    <span class="shop-item-price">55$</span>
-                    <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
-                </div>    
-            </div>
-            <div class="shop-item">    
-                <span class="shop-item-title">Pant</span>
-                <img class="shop-item-image" src="images/Obito.jpg" >
-                <div class="shop-item-details">
-                    <span class="shop-item-price">75$</span>
-                    <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
-                </div>    
-            </div>
+                <% items.merch.forEach(function(item){%> 
+                    <div class="shop-item" data-item-id="<%=item.id%>">
+                    <span class="shop-item-title"><%= item.name %> </span>
+                    
+                    <img class="shop-item-image" src="<%= item.imgName %> " >
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$<%= item.price/100 %> </span>
+                        <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
+                    </div>    
+                </div>
+             <% }) %> 
             </div>
         </section>
         <section class="content-section container">

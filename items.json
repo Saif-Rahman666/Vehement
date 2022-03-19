@@ -2,7 +2,7 @@
     "music":[
         {   "id": 1,
             "name": "Album 1",
-            "price": 25,
+            "price": 2500,
             "imgName":"images/pika.jpg"
         },
         {   "id": 2,
